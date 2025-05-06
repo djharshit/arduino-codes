@@ -1,26 +1,21 @@
-const int trigPin = 13;   // Trigger pin of ultrasonic sensor
-const int echoPin = 14;  // Echo pin of ultrasonic sensor
+#include <ultrasonic.h>
+
+#define TrigPin 14   // Trigger pin of ultrasonic sensor
+#define EchoPin 13  // Echo pin of ultrasonic sensor
+int distance = 0;
+
+ultrasonic myUltra;
 
 void setup() {
-    Serial.begin(9600); // Start serial communication
-    pinMode(trigPin, OUTPUT);
-    pinMode(echoPin, INPUT);
+    Serial.begin(9600);
+    pinMode(TrigPin, OUTPUT);
+    pinMode(EchoPin, INPUT);
+    myUltra.Init(TrigPin, EchoPin);
 }
 
 void loop() {
-    digitalWrite(trigPin, LOW);
-    delayMicroseconds(2);
-    digitalWrite(trigPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trigPin, LOW);
+    distance = myUltra.Ranging();
 
-    long duration = pulseIn(echoPin, HIGH); // Measure time for echo
-    float distance = duration * 0.034 / 2; // Convert to distance (cm)
-
-    if (distance < 10) {
-      
-    }
-    
     Serial.print("Distance: ");
     Serial.print(distance);
     Serial.println(" cm");

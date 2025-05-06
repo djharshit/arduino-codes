@@ -1,4 +1,4 @@
-const int buzzerPin = 5;
+#define buzzerPin 12
 
 void setup() {
     pinMode(buzzerPin, OUTPUT);

@@ -1,0 +1,169 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button {
+  font-size: 20px;
+  padding: 15px;
+  margin: 10px;
+  width: 150px;
+  height: 80px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+input[type="range"] {
+  width: 500px;
+}
+
+.control-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.slider-container {
+  margin: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.slider-container label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex: 0 0 100px;
+  text-align: left;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 35px;
+  background: linear-gradient(to right, #ff7eb3, #ff758c, #ff6a65);
+  border-radius: 10px;
+  outline: none;
+  margin: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(circle, #ffffff, #007bff);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb,
+input[type="range"]::-ms-thumb {
+  width: 35px;
+  height: 35px;
+  background: radial-gradient(circle, #ffffff, #007bff);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+div[style*="margin: 20px;"] span {
+  font-size: 1.2rem;
+  color: #333;
+  flex: 0 0 50px;
+  text-align: right;
+}
+
+#joystick-zone-1 {
+  width: 600px;
+  height: 600px;
+  margin: 0;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  position: relative;
+}
+
+.joystick-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.joystick-label {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#label-up {
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#label-down {
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#label-left {
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#label-right {
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.styled-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #a20082;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  margin: 10px;
+  width: 150px;
+  height: 80px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.styled-select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(255, 0, 217);
+}
+
+.styled-select option {
+  background-color: white;
+  color: black;
+}

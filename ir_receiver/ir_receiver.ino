@@ -72,10 +72,10 @@
 
 #include <IRremote.hpp> // include the library
 
-const int IR_RECEIVE_PIN = 11;
+#define IR_RECEIVE_PIN 33
 
 void setup() {
-    Serial.begin(115200);
+    Serial.begin(9600);
 
     // Just to know which program is running on my Arduino
     Serial.println(F("START " __FILE__ " from " __DATE__ "\r\nUsing library version " VERSION_IRREMOTE));

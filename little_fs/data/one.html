@@ -1,0 +1,39 @@
+<html>
+<style>
+    body {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+
+<body>
+    <center>
+        <h1>moveCar control</h1>
+    </center>
+    <center>
+        <button onmousedown="moveCar('tl')" onmouseup="moveCar('s')" ontouchstart="moveCar('tl')"
+            ontouchend="moveCar('s')" style="width:200px;height:250px">Trun left</button>
+        <button onmousedown="moveCar('f')" onmouseup="moveCar('s')" ontouchstart="moveCar('f')"
+            ontouchend="moveCar('s')" style="width:200px;height:250px">Forward</button>
+        <button onmousedown="moveCar('tr')" onmouseup="moveCar('s')" ontouchstart="moveCar('tr')"
+            ontouchend="moveCar('s')" style="width:200px;height:250px">Trun Right</button>
+    </center>
+    <center>
+        <button onmousedown="moveCar('l')" onmouseup="moveCar('s')" ontouchstart="moveCar('l')"
+            ontouchend="moveCar('s')" style="width:200px;height:250px">Left</button>
+        <button onmousedown="moveCar('b')" onmouseup="moveCar('s')" ontouchstart="moveCar('b')"
+            ontouchend="moveCar('s')" style="width:200px;height:250px">Backward</button>
+        <button onmousedown="moveCar('r')" onmouseup="moveCar('s')" ontouchstart="moveCar('r')"
+            ontouchend="moveCar('s')" style="width:200px;height:250px">Right</button>
+    </center>
+    <script>
+        function moveCar(move) {
+            fetch('/Car?move=' + move);
+        }
+    </script>
+</body>
+
+</html>

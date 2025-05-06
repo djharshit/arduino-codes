@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="nipplejs.min.js"></script>
+</head>
+
+<body>
+    <h1>Major Project</h1>
+    <p><strong>Distance: </strong><span id="distance">--</span> cm</p>
+    <div class="joystick-container">
+        <div id="joystick-zone-1"></div>
+        <div class="joystick-label" id="label-up">Forward</div>
+        <div class="joystick-label" id="label-left">Turn Left</div>
+        <div class="joystick-label" id="label-right">Turn Right</div>
+        <div class="joystick-label" id="label-down">Backward</div>
+    </div>
+    <div style="margin-bottom: 100px;"></div>
+    <div>
+        <button class="control-btn turn-btn" style="margin-right: 100px;" data-move="tl">Move Left</button>
+        <button class="control-btn turn-btn" style="margin-left: 100px;" data-move="tr">Move Right</button>
+    </div>
+    <div class="slider-container">
+        <label class="slider-label" for="slider1">Chassis</label>
+        <input type="range" id="slider1" min="0" max="180" value="100" oninput="updateSliderValue(1, this.value)">
+        <span id="slider1-value">100</span>
+    </div>
+    <div class="slider-container">
+        <label class="slider-label" for="slider2">Shoulder</label>
+        <input type="range" id="slider2" min="10" max="100" value="55" oninput="updateSliderValue(2, this.value)">
+        <span id="slider2-value">55</span>
+    </div>
+    <div class="slider-container">
+        <label class="slider-label" for="slider3">Elbow</label>
+        <input type="range" id="slider3" min="120" max="180" value="150" oninput="updateSliderValue(3, this.value)">
+        <span id="slider3-value">150</span>
+    </div>
+    <div class="slider-container">
+        <label class="slider-label" for="slider4">Claw</label>
+        <input type="range" id="slider4" min="160" max="180" value="170" oninput="updateSliderValue(4, this.value)">
+        <span id="slider4-value">170</span>
+    </div>
+    <div style="text-align: center;">
+        <button onclick="toggleBuzz()" class="control-btn">Beep</button>
+        <button onclick="toggleLed(this)" class="control-btn">LED Off</button>
+        <button onclick="toggleClaw(this)" class="control-btn">Claw Close</button>
+    </div>
+    <div style="text-align: center;">
+        <button onclick="toggleTrack()" class="control-btn">Track</button>
+        <button onclick="toggleAvoidance()" class="control-btn">Avoidance</button>
+        <button onclick="toggleFollow()" class="control-btn">Follow</button>
+    </div>
+    <div style="text-align: center;">
+        <button onclick="toggleReset()" class="control-btn">Reset</button>
+        <select id="music-options" class="styled-select" onchange="handleMusic(this.value)">
+            <option value="0" selected>Select Music</option>
+            <option value="1">Track 1</option>
+            <option value="2">Track 2</option>
+            <option value="3">Track 3</option>
+        </select>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
